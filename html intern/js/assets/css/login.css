@@ -1,0 +1,131 @@
+
+
+
+body{
+ 
+
+background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+font-family:'poppins,sans-serif';
+
+}
+
+#form{
+    width: 400px;
+    margin: 20vh auto 0 auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 30px;
+
+
+}
+
+h1{
+    text-align: center;
+
+}
+#form button{
+    background-color:salmon;
+    border: 1px solid lavenderblush;
+    padding: 10px;
+    margin: 1px;
+   
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100;
+
+
+
+        position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+
+}
+
+.input-group input{
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid pink;
+
+
+
+}
+
+
+
+.input-group input:focus{
+    outline: 0;
+}
+
+.input-group .error{
+    color: red;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+
+.input-group.error input{
+    border-color: red;
+}
+.input-group.success input{
+    border-color: seagreen;
+}
+
+
+.form-select{
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid pink;
+
+}
+
+.Gender{
+
+    margin-top: 5px;
+    display: flex;
+    padding: 6px;
+
+    
+}
+
+.box{
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+
+.numdata{
+    width: 100% !important;    
+}
+
+#example{
+
+    margin-top: 15px;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.form_fields{
+    width: 100% !important;  
+    border-radius: 5px !important;
+    font-size: 20px !important;
+    margin-top: 5px !important;
+    padding: 10px !important;
+    border: 1px solid pink !important;
+}

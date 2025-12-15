@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD with LocalStorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form id="form">
+        <input type="text" id="username" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="text" id="mobile" placeholder="Enter Mobile" required>
+        <button type="submit">Save</button>
+        <button type="reset" id="resetBtn">Reset</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Search..." />
+
+    <button id="clearAll">Clear All</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+    </table>
+
+<script src="script.js"></script>
+</body>
+</html>
