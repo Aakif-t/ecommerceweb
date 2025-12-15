@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fikaa Ecommerce </title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.bootstrap5.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  
+</head>
+
+<body>
+
+<div class="container">
+    <form action="#" id="form">
+        <h1> Registration Form
+
+        </h1>
+
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form_fields">
+            <div class="error"></div>
+        </div>
+
+
+   <div class="input-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" class="form_fields">
+            <div class="error"></div>
+        </div>
+
+
+
+
+ <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form_fields">
+            <div class="error"></div>
+        </div>
+
+        
+
+         <div class="input-group">
+            <label for="confirm password">Confirm password</label>
+            <input type="password" id="confirm_password" name="confirm password" class="form_fields">
+            <div class="error"></div>
+        </div>
+
+
+
+        
+
+<div class="input-group">
+  <label for="phone" class="form-label">Phone Number</label>
+  <input
+    type="number"
+    class="form_fields"
+    id="phone"
+    name="phone"
+ 
+    placeholder="+91 9876543210"
+    inputmode="numeric"
+    pattern="[0-9]{10,15}"
+    width="100">
+  </div>
+  
+  
+
+
+
+<div class="input-group Gender">
+
+<label>Gender</label></div>
+
+
+<Div class="box" style="display: flex; justify-content: space-around;">
+<input class="form-check-input" type="radio" name="flexRadioDefault" value="Male" id="flexRadioDefault1">
+<label class="form-check-label" for="flexRadioDefault1">Male</label>
+
+<input class="form-check-input" type="radio" name="flexRadioDefault" value="Female" id="flexRadioDefault2">
+<label class="form-check-label" for="flexRadioDefault2">Female</label>
+
+<input class="form-check-input" type="radio" name="flexRadioDefault" value="Other" id="flexRadioDefault3">
+<label class="form-check-label" for="flexRadioDefault3">Other</label>
+
+</div>
+
+
+
+
+<div class="input-group">
+  <label for="dob" class="form-label">Date of Birth</label>
+  <input type="date" class="form_fields" id="dob" name="dob" >
+</div>
+
+
+<div class="input-group">
+  <label for="location" class="form-label">Location</label>
+  <select class="form_fields" id="location" name="location" >
+    <option value="" disabled selected>Select location</option>
+    <option value="kerala">kerala</option>
+    <option value="chennai">Chennai</option>
+    <option value="bangalore">Bangalore</option>
+    <option value="mumbai">Mumbai</option>
+  
+  </select>
+</div>
+
+
+
+
+
+
+
+
+
+<button type="submit" onclick="addtable()">Submit</button>
+
+
+    </form>
+
+</div>
+
+
+
+<table id="example" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>password</th>
+                <th>Confirm password</th>
+                <th>Phone number</th>
+                <th>Gender</th>
+                <th>Dob</th>
+                <th>location</th>
+            </tr>
+        </thead>
+ <tbody id="previewBody"></tbody>
+
+</table>
+
+
+     <script>
+        function addtable(){
+
+              let username = document.getElementById("username").value;
+              let email = document.getElementById("email").value.trim();
+              let password = document.getElementById("password").value.trim();
+              let confirm_password = document.getElementById("confirm_password").value.trim();
+              let phone = document.getElementById("phone").value.trim();
+              let flexRadioDefault = document.querySelector('input[name="flexRadioDefault"]:checked')?.value || "";
+              let dob = document.getElementById("dob").value.trim();
+              let location = document.getElementById("location").value.trim();
+
+              if (name === "" || email === ""|| flexRadioDefault === ""|| password === ""|| confirm_password === ""|| location === ""|| phone === ""|| dob === "") {
+                   // alert("Please fill all required fields!");
+              }
+              
+               // Add row into table body
+              let newRow = `
+                  <tr>
+                      <td>${username}</td>
+                      <td>${email}</td>
+                      <td>${password}</td>
+                      <td>${confirm_password}</td>
+                      <td>${phone}</td>
+                      <td>${flexRadioDefault}</td>
+                      <td>${dob}</td>
+                      <td>${location}</td>
+                  </tr>
+              `;
+
+              document.getElementById("previewBody").innerHTML = newRow;
+
+              // Show table
+              document.getElementById("example").style.display = "table";
+
+              // Stop actual form submission
+              return false;
+
+
+        }
+      </script>
+
+
+        <script src="/assets/js/login.js"></script>
+
+</body>
+</html>

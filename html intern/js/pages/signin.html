@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fikaa Ecommerce </title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.bootstrap5.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/login.js"></script>
+  
+</head>
+
+<body>
+
+<div class="container">
+    <form action="form" id="form">
+        <h1> Sign In
+
+        </h1>
+
+        <div class="input-group">
+            <label for="username">Username<span style="color: red;">*</span></label>
+            <input type="text" id="username" name="username" class="form_fields">
+            <span id="usererror" style="display: none;color: red;">Please enter a valid Username</span>
+            <div class="error"></div>
+        </div>
+
+ <div class="input-group">
+            <label for="password">Password<span style="color: red;">*</span></label>
+            <input type="password" id="password" name="password" class="form_fields">
+            <span  id="passerror" style="display: none;color: red;">Please enter a valid Password</span>
+            <div class="error"></div>
+        </div>
+
+<button type="button" onclick="signin()">Sign In</button>
+<a href="/pages/login.html" style="text-align: center;">Register Now</a>
+
+    </form>
+
+</div>
+
+
+     <script>
+        function signin(){
+
+              let username = document.getElementById("username").value;
+              let password = document.getElementById("password").value.trim();
+              var isvaliduser = true;
+            
+              if(username==undefined || username==null || username==""){
+                document.getElementById("usererror").style.display = "block";  
+                isvaliduser = false;
+              }else{
+                document.getElementById("usererror").style.display = "none";
+              }
+              if(password==undefined || password==null || password==""){
+                document.getElementById("passerror").style.display = "block"; 
+                isvaliduser = false;              
+              }else{
+                document.getElementById("usererror").style.display = "none";
+              }
+
+              if(isvaliduser){
+                window.location.href = "index.html";
+              }
+              // Stop actual form submission
+              return false;
+        }
+      </script>
+
+
+    
+</body>
+</html>
